@@ -92,7 +92,7 @@ function App() {
       .then(response => response.json())
       .then(data => {
         if (data.success) {
-          const projectURL = import.meta.env.DEV ? `http://localhost:3000/projects/${data.id}` : `https://module-4-promo-bpt-proyectos-molones.onrender.com/projects/${data.id}`;
+          const projectURL = import.meta.env.DEV ? `http://localhost:3000/projects/${data.id}` : `https://gestor-proyectos-f1bf.onrender.com/projects/${data.id}`;
           setMessageUrl(projectURL);
           setMessageError('');
         } else {
