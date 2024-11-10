@@ -81,7 +81,7 @@ function App() {
   
   //Create project card
   const handleClickCreate = () => {
-    const server = import.meta.env.DEV ? 'http://localhost:3000/projects' : '/projects';
+    const server = import.meta.env.DEV ? 'http://localhost:3000/projects' : 'https://gestor-proyectos-f1bf.onrender.com/projects';
     fetch(server, {
       method: 'POST',
       headers: {
