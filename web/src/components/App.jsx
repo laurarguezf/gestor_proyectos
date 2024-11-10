@@ -34,7 +34,7 @@ function App() {
     //Fetch projects
     async function fetchProjects() {
       try {
-        const server = import.meta.env.DEV ? 'http://localhost:3000/projects' : '/projects';
+        const server = import.meta.env.DEV ? 'http://localhost:3000/projects' : 'https://gestor-proyectos-f1bf.onrender.com/projects';
         const res = await fetch(server)
         const data = await res.json();
         setProjectsArray(data);
