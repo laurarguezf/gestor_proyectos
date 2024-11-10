@@ -122,8 +122,8 @@ server.post('/projects', async (req, res) => {
 });
 
 
-//Endpoint para el detalle de un proyecto, que acabo de crear
-server.get('/projects/:id', async (req, res) => {
+// -------------- Endpoint para el detalle de un proyecto, que acabo de crear -------------- 
+server.get('/:id', async (req, res) => {
 	//Me conecto a la db
 	const connection = await getConnection();
 	//Obtener el id el proyecto de la url
