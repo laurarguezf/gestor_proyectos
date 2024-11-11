@@ -19,31 +19,35 @@ function Landing({ projectsArray }) {
             <div className="card__wrap">
             {projectsArray.map((project) => {
                 return (
-                    <a href={project.idproject} key={project.idproject} className="detail-link">
+                    <Link to={project.idproject} key={project.idproject} className="detail-link">
                         <article className="card" key={project.idproject}>
-                            <h2 className="card__projectTitle">
-                                <span className="card__projectTitle--text">Personal project card</span>
-                            </h2>
+                        <h2 className="card__projectTitle">
+                            <span className="card__projectTitle--text">Personal project card</span>
+                        </h2>
 
-                            <div className="card__author">
-                                <div className="card__authorPhoto" style={{ backgroundImage: project.author_photo ? `url(${project.author_photo})` : null }} ></div>
-                                <p className="card__job">{project.author_job || "Full stack Developer"}</p>
-                                <h3 className="card__name">{project.author_name || "Emmelie Bjôrklund"}</h3>
+                        <div className="card__author">
+                            <div className="card__authorPhoto" style={{ backgroundImage: project.author_photo ? `url(${project.author_photo})` : null }} ></div>
+                            <p className="card__job">{project.author_job || "Full stack Developer"}</p>
+                            <h3 className="card__name">{project.author_name || "Emmelie Bjôrklund"}</h3>
+                        </div>
+
+                        <div className="card__project">
+                            <h3 className="card__name card_name">{project.project_name || "Elegant Workspace"}</h3>
+                            <p className="card__slogan">{project.project_slogan || "Diseños Exclusivos"}</p>
+                            <h3 className="card__descriptionTitle">Product description</h3>
+                            <p className="card__description">{project.project_description || "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quos? Itaque, molestias eveniet laudantium adipisci vitae ratione"} </p>
+                            <div className="card__technicalInfo">
+                                <p className="card__technologies">{project.project_technologies || "React JS - HTML - CSS"}</p>
+                                <p className="icon icon__www" href={project.project_demo} title="Haz click para ver el proyecto online">Web link</p>
+                                <p className="icon icon__github" href={project.project_repo} title="Haz click para ver el código del proyecto">GitHub link</p>
                             </div>
+                        </div>  
 
-                            <div className="card__project">
-                                <h3 className="card__name card_name">{project.project_name || "Elegant Workspace"}</h3>
-                                <p className="card__slogan">{project.project_slogan || "Diseños Exclusivos"}</p>
-                                <h3 className="card__descriptionTitle">Product description</h3>
-                                <p className="card__description">{project.project_description || "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quos? Itaque, molestias eveniet laudantium adipisci vitae ratione"} </p>
-                                <div className="card__technicalInfo">
-                                    <p className="card__technologies">{project.project_technologies || "React JS - HTML - CSS"}</p>
-                                    <p className="icon icon__www" href={project.project_demo} title="Haz click para ver el proyecto online">Web link</p>
-                                    <p className="icon icon__github" href={project.project_repo} title="Haz click para ver el código del proyecto">GitHub link</p>
-                                </div>
-                            </div>  
-                        </article>                                  
-                    </a>      
+                        
+                    </article>
+                                                    
+                                                    
+                </Link>      
 
         
                 );
