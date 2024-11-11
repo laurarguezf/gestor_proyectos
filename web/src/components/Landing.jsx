@@ -20,7 +20,7 @@ function Landing({ projectsArray }) {
             {projectsArray.map((project) => {
                 return (
                     <a href={project.idproject} key={project.idproject} className="detail-link">
-                        <article className="card" key={project.idproject}>
+                        <article className="card">
                         <h2 className="card__projectTitle">
                             <span className="card__projectTitle--text">Personal project card</span>
                         </h2>
