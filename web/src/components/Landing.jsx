@@ -19,7 +19,7 @@ function Landing({ projectsArray }) {
             <div className="card__wrap">
             {projectsArray.map((project) => {
                 return (
-                    <Link to={project.idproject} key={project.idproject} className="detail-link">
+                    <a href={project.idproject} key={project.idproject} className="detail-link">
                         <article className="card" key={project.idproject}>
                         <h2 className="card__projectTitle">
                             <span className="card__projectTitle--text">Personal project card</span>
@@ -47,7 +47,7 @@ function Landing({ projectsArray }) {
                     </article>
                                                     
                                                     
-                </Link>      
+                </a>      
 
         
                 );
