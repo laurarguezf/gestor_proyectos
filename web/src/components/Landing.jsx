@@ -38,8 +38,8 @@ function Landing({ projectsArray }) {
                             <p className="card__description">{project.project_description || "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quos? Itaque, molestias eveniet laudantium adipisci vitae ratione"} </p>
                             <div className="card__technicalInfo">
                                 <p className="card__technologies">{project.project_technologies || "React JS - HTML - CSS"}</p>
-                                <p className="icon icon__www" href={project.project_demo} title="Haz click para ver el proyecto online">Web link</p>
-                                <p className="icon icon__github" href={project.project_repo} title="Haz click para ver el código del proyecto">GitHub link</p>
+                                <a className="icon icon__www" href={project.project_demo} title="Haz click para ver el proyecto online">Web link</a>
+                                <a className="icon icon__github" href={project.project_repo} title="Haz click para ver el código del proyecto">GitHub link</a>
                             </div>
                         </div>  
 
