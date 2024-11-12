@@ -11,7 +11,7 @@ ProjectHub es una aplicación web que permite gestionar y visualizar proyectos i
 
 ## Tecnologías Utilizadas 🛠️
 
-- **Frontend**: 🌐HTML5, 🎨Sass, ⚛️React, EJS (para el renderizado de vistas en el servidor)
+- **Frontend**: 🌐HTML5, 🎨Sass, ⚛️React, 📝EJS (para el renderizado de vistas en el servidor)
 - **Backend**: 🟩Node.js, 🚂Express.js
 - **Base de Datos**: 🗃️MySQL (para almacenar la información de proyectos y autores)
 
