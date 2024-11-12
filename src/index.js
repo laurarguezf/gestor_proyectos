@@ -141,8 +141,14 @@ server.get('/projects/:id', async (req, res) => {
 			return;
 		}
 
+		const project = results[0];
+
+		//Comprobamos que las URLs tengan 'https://' al inicio
+        project.project_demo = project.project_demo.startsWith('http') ? project.project_demo : `https://${project.project_demo}`;
+        project.project_repo = project.project_repo.startsWith('http') ? project.project_repo : `https://${project.project_repo}`;
+
 		//Renderizar una vista de ejs con los datos del proyecto y envíar el objeto con los datos del proyecto
-		res.render('cards', { project: results[0] });
+		res.render('cards', { project });
 
 	} catch (error) {
 		res.status(500).send('Error al recuperar el proyecto');
